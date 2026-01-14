@@ -38,3 +38,64 @@ header > img {
 header > img:hover {
   filter: drop-shadow(2px 3px 8px rgba(53, 222, 242));
 }
+
+.nav-menu {
+  height: 100%;
+  width: 50%;
+}
+
+.menu-list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.list-item {
+  display: flex;
+}
+
+.list-item > a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.list-item > a:hover {
+  color: rgba(53, 222, 242);
+  text-decoration: underline;
+}
+
+.dark-mode-container {
+  height: 100%;
+  width: 10%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+.dark-mode-container svg {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.sun-icon:hover{
+  color: rgb(240, 206, 13);
+}
+
+.moon-icon{
+  display: none;
+  position: absolute;
+  left: 85px;
+}
+
+.moon-icon:hover{
+  color: #fff;
+}
