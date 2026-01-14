@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+.dark-mode {
+  font-family: "Jersey 25", sans-serif;
+  color: #fff;
+}
+
 body {
   min-width: 100vw;
   min-height: 100vh;
@@ -100,7 +105,36 @@ header > img:hover {
   color: #fff;
 }
 
-#text{
+.sobre-mi {
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.sobre-mi h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.sobre-mi img {
+  position: absolute;
+  width: 270px;
+  height: 260px;
+  border-radius: 50%;
+  right: 70px;
+}
+
+
+
+#text {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
@@ -108,32 +142,40 @@ header > img:hover {
   width: 0;
   font-size: 32px;
   margin-left: 20px;
+  text-align: center;
 }
 
 /* Animación activa */
-.typing{
-  animation:
-    typing var(--type-duration) steps(var(--steps)) forwards,
-    blink .6s step-end infinite;
+.typing {
+  animation: typing var(--type-duration) steps(var(--steps)) forwards,
+    blink 0.6s step-end infinite;
 }
 
-.deleting{
-  animation:
-    deleting var(--delete-duration) steps(var(--steps)) forwards,
-    blink .6s step-end infinite;
+.deleting {
+  animation: deleting var(--delete-duration) steps(var(--steps)) forwards,
+    blink 0.6s step-end infinite;
 }
 
-@keyframes typing{
-  from { width: 0; }
-  to   { width: fit-content; }
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: fit-content;
+  }
 }
 
-@keyframes deleting{
-  from { width: fit-content; }
-  to   { width: 0; }
+@keyframes deleting {
+  from {
+    width: fit-content;
+  }
+  to {
+    width: 0;
+  }
 }
 
-@keyframes blink{
-  50% { border-color: transparent; }
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
-
