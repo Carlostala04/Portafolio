@@ -86,16 +86,54 @@ header > img:hover {
   cursor: pointer;
 }
 
-.sun-icon:hover{
+.sun-icon:hover {
   color: rgb(240, 206, 13);
 }
 
-.moon-icon{
+.moon-icon {
   display: none;
   position: absolute;
   left: 85px;
 }
 
-.moon-icon:hover{
+.moon-icon:hover {
   color: #fff;
 }
+
+#text{
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #000;
+  width: 0;
+  font-size: 32px;
+  margin-left: 20px;
+}
+
+/* Animación activa */
+.typing{
+  animation:
+    typing var(--type-duration) steps(var(--steps)) forwards,
+    blink .6s step-end infinite;
+}
+
+.deleting{
+  animation:
+    deleting var(--delete-duration) steps(var(--steps)) forwards,
+    blink .6s step-end infinite;
+}
+
+@keyframes typing{
+  from { width: 0; }
+  to   { width: fit-content; }
+}
+
+@keyframes deleting{
+  from { width: fit-content; }
+  to   { width: 0; }
+}
+
+@keyframes blink{
+  50% { border-color: transparent; }
+}
+
