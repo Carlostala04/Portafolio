@@ -200,7 +200,8 @@ header > img:hover {
 .contact-button {
   width: 150px;
   height: 40px;
-  border: 1px solid #000;
+  background-color: #f7f8f8;
+  border: 1px solid transparent;
   border-radius: 8px;
   text-align: center;
   align-content: center;
