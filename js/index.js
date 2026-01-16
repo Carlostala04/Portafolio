@@ -1,4 +1,4 @@
-const textArray = ["Carlos Talavera", "Programador","Ingeniero en sistemas"];
+const textArray = ["Carlos Talavera", "Desarrollador Frontend","Ingeniero en sistemas"];
 let i = 0;
 const subject_text = document.getElementById("text");
 
