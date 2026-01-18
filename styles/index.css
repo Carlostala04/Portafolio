@@ -377,6 +377,10 @@ header > img:hover {
   fill: rgb(121, 82, 179);
 }
 
+.icon-git{
+  fill: rgb(241, 80, 47);
+}
+
 .backend-tecnologias {
   grid-column: span 2 / span 2;
   grid-row: span 3 / span 3;
