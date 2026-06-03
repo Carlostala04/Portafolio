@@ -4,6 +4,7 @@ export function BaselineWhatsapp(props) {
   return (
     <svg
       {...props}
+      className={`icon whatsapp-icon whatsapp-icon-dark${props.className ? ` ${props.className}` : ""}`}
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"

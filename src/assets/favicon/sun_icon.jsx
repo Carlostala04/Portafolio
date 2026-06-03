@@ -4,6 +4,7 @@ export function SunLinear(props) {
   return (
     <svg
       {...props}
+      className={`icon sun-icon${props.className ? ` ${props.className}` : ""}`}
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
