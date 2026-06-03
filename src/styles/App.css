@@ -1,0 +1,43 @@
+:root {
+  /* Variables for dark-mode*/
+  --dark-mode-bg-color: #07090c;
+  --dark-mode-bg-soft-color: #0d1116;
+  --dark-mode-bg-card-color: #0b1015;
+  --dark-mode-accent-color-primary: #5fdde8;
+  --dark-mode-accent-color-secundary: #3f8d9b;
+  --dark-mode-main-text: #e8f1f3;
+  --dark-mode-soft-text: #9ba8ad;
+  --dark-mode-faint-text: #5b676d;
+  --dark-mode-under-accent-text: #051114;
+
+  /*variable for light-mode*/
+  --light-mode-bg-color: #f0f2f1;
+  --light-mode-bg-soft-color: #e3e7e7;
+  --light-mode-bg-card-color: #f7f9f9;
+  --light-mode-accent-color-primary: #2d7b89;
+  --light-mode-accent-color-secundary: #3f8d9b;
+  --light-mode-main-text: #0b1518;
+  --light-mode-soft-text: #3a484c;
+  --light-mode-faint-text: #6e7a7e;
+
+  /*Extra colors*/
+  --dark-mode-warn: #ffb547;
+
+  /*Fonts*/
+  --sans: "Space Grotesk", "Geist", ui-sans-serif, system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --display: "Space Grotesk", var(--sans); /* usado para títulos */
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-mode-bg-color);
+  color: var(--dark-mode-main-text);
+  font-family:var(--sans);
+  
+}
