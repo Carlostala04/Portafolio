@@ -1,14 +1,76 @@
 import { useState } from "react";
-import "./styles/App.cssko";
+import "./styles/App.css";
 import Header from "./components/Header";
 import Perfil from "../public/perfil.png";
+import Infinitie from "./assets/favicon/infinite_icon";
 import { useCalculateExperience } from "./hooks/calculateYearsExperience";
+import CardProyects from "./components/CardProyects";
+import ReactIcon from "./assets/favicon/tecnologies/ReactIcon";
+import SupaBase from "./assets/favicon/tecnologies/SupaBaseIcon";
+import PostgreSql from "./assets/favicon/tecnologies/PostgreSqlIcon";
+import NestJS from "./assets/favicon/tecnologies/NestJs";
+import CssIcon from "./assets/favicon/tecnologies/CssIcon";
 function App() {
   const [theme, setTheme] = useState(true);
   const experienceYears = useCalculateExperience("2026-5-22");
   const toggleTheme = () => {
     setTheme(!theme);
   };
+  const proyectos = [
+    {
+      id: 1,
+      imagen: "../../public/proyectImages/mediRecord.png",
+      titulo: "MediRecord",
+      descripcion:
+        "Sistema web para gestionar pacientes, consultas e historial médico.",
+      repositorio: "https://github.com/usuario/medirecord",
+      preview: "https://medirecord-demo.com",
+      tecnologias: [
+        {
+          nombre: "React",
+          Icono: ReactIcon,
+        },
+        {
+          nombre: "CSS",
+          Icono: CssIcon,
+        },
+        {
+          nombre: "SupaBase",
+          Icono: SupaBase,
+        },
+        {
+          nombre: "PostgreSQL",
+          Icono: PostgreSql,
+        },
+      ],
+    },
+    {
+      id: 2,
+      imagen: "../../public/proyectImages/myFarrmer.png",
+      descripcion:
+        "Aplicacion mobile de gestion de animales y cultivos para ganaderos",
+      repositorio: "https://github.com/Carlostala04/My-Farmer.git",
+      preview: "#",
+      tecnologias: [
+        {
+          nombre: "React",
+          Icono: ReactIcon,
+        },
+        {
+          nombre: "CSS",
+          Icono: CssIcon,
+        },
+        {
+          nombre: "NestJS",
+          Icono: NestJS,
+        },
+        {
+          nombre: "SupaBase",
+          Icono: SupaBase,
+        },
+      ],
+    },
+  ];
   return (
     <>
       <Header toggleTheme={toggleTheme} darkMode={theme} />
@@ -81,10 +143,27 @@ function App() {
               <span className="sub-title">Desarrollando software</span>
             </h5>
           </article>
-          <article className="abou-me-card">
-            <h5>
-            </h5>
+          <article className="about-me-card">
+            <Infinitie />
+            <span>Tazas de cafe</span>
           </article>
+          <div className="cv-button"></div>
+        </div>
+      </section>
+      <section className="Proyects">
+        <h3>Proyectos</h3>
+        <div className="proyects-container">
+          {proyectos.map((proyecto) => (
+            <CardProyects
+              imagen={proyecto.imagen}
+              descripcion={proyecto.descripcion}
+              preview={proyecto.preview}
+              repositorio={proyecto.repositorio}
+              tecnologias={proyecto.tecnologias}
+              titulo={proyecto.titulo}
+              key={proyecto.id}
+            />
+          ))}
         </div>
       </section>
     </>
