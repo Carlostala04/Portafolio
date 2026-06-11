@@ -1,0 +1,74 @@
+/* General icons */
+.icon {
+}
+.github-icon {
+}
+.infinite-icon {
+}
+.link-icon {
+}
+.moon-icon {
+}
+.sun-icon {
+}
+
+/* Gmail */
+.gmail-icon {
+}
+.gmail-icon-dark {
+}
+.gmail-icon-light {
+}
+
+/* LinkedIn */
+.linkedin-icon {
+}
+.linkedin-icon-dark {
+}
+.linkedin-icon-light {
+}
+
+/* WhatsApp */
+.whatsapp-icon {
+}
+.whatsapp-icon-dark {
+}
+.whatsapp-icon-light {
+}
+
+/* Tech icons */
+.tech-icon {
+}
+.tech-icon.css:hover {
+  color: #663399;
+}
+.tech-icon.express:hover {
+  color: #fff;
+}
+.tech-icon.github:hover {
+  color: #fff;
+}
+.tech-icon.html:hover {
+  color: #e34f26;
+}
+.tech-icon.java:hover {
+  color: #ed8b00;
+}
+.tech-icon.js:hover {
+  color: #f7df1e;
+}
+.tech-icon.mysql:hover {
+  color: #4479a1;
+}
+.tech-icon.nestjs:hover {
+  color: #e0234e;
+}
+.tech-icon.postgresql:hover {
+  color: #4169e1;
+}
+.tech-icon.react:hover {
+  color: #61dafb;
+}
+.tech-icon.supabase:hover {
+  color: #3fcf8e;
+}
