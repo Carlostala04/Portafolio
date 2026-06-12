@@ -72,3 +72,9 @@
 .tech-icon.supabase:hover {
   color: #3fcf8e;
 }
+.tech-icon.claude:hover {
+  color: #e34f26;
+}
+.tech-icon.git:hover{
+  color: #e34f26;
+}
