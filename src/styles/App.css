@@ -1,43 +1,66 @@
 :root {
-  /* Variables for dark-mode*/
-  --dark-mode-bg-color: #07090c;
-  --dark-mode-bg-soft-color: #0d1116;
-  --dark-mode-bg-card-color: #0b1015;
-  --dark-mode-accent-color-primary: #5fdde8;
-  --dark-mode-accent-color-secundary: #3f8d9b;
-  --dark-mode-main-text: #e8f1f3;
-  --dark-mode-soft-text: #9ba8ad;
-  --dark-mode-faint-text: #5b676d;
-  --dark-mode-under-accent-text: #051114;
+  /* Paleta oscura */
+  --dark-bg: #07090c;
+  --dark-bg-soft: #0d1116;
+  --dark-bg-card: #0b1015;
+  --dark-accent: #5fdde8;
+  --dark-accent-secondary: #3f8d9b;
+  --dark-text: #e8f1f3;
+  --dark-text-soft: #9ba8ad;
+  --dark-text-faint: #5b676d;
+  --dark-under-accent: #051114;
+  --dark-warn: #ffb547;
 
-  /*variable for light-mode*/
-  --light-mode-bg-color: #f0f2f1;
-  --light-mode-bg-soft-color: #e3e7e7;
-  --light-mode-bg-card-color: #f7f9f9;
-  --light-mode-accent-color-primary: #2d7b89;
-  --light-mode-accent-color-secundary: #3f8d9b;
-  --light-mode-main-text: #0b1518;
-  --light-mode-soft-text: #3a484c;
-  --light-mode-faint-text: #6e7a7e;
+  /* Paleta clara */
+  --light-bg: #f0f2f1;
+  --light-bg-soft: #e3e7e7;
+  --light-bg-card: #f7f9f9;
+  --light-accent: #2d7b89;
+  --light-accent-secondary: #3f8d9b;
+  --light-text: #0b1518;
+  --light-text-soft: #3a484c;
+  --light-text-faint: #6e7a7e;
+  --light-under-accent: #e8f4f6;
 
-  /*Extra colors*/
-  --dark-mode-warn: #ffb547;
+  /* Variables semánticas — por defecto tema oscuro */
+  --color-bg: var(--dark-bg);
+  --color-bg-soft: var(--dark-bg-soft);
+  --color-bg-card: var(--dark-bg-card);
+  --color-accent: var(--dark-accent);
+  --color-accent-secondary: var(--dark-accent-secondary);
+  --color-text: var(--dark-text);
+  --color-text-soft: var(--dark-text-soft);
+  --color-text-faint: var(--dark-text-faint);
+  --color-under-accent: var(--dark-under-accent);
 
-  /*Fonts*/
-  --sans: "Space Grotesk", "Geist", ui-sans-serif, system-ui, sans-serif;
+  /* Tipografías */
+  --sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
-  --display: "Space Grotesk", var(--sans); /* usado para títulos */
 }
+
+/* Sobreescribir variables semánticas al cambiar a tema claro */
+[data-theme="light"] {
+  --color-bg: var(--light-bg);
+  --color-bg-soft: var(--light-bg-soft);
+  --color-bg-card: var(--light-bg-card);
+  --color-accent: var(--light-accent);
+  --color-accent-secondary: var(--light-accent-secondary);
+  --color-text: var(--light-text);
+  --color-text-soft: var(--light-text-soft);
+  --color-text-faint: var(--light-text-faint);
+  --color-under-accent: var(--light-under-accent);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   width: 100vw;
-  height: 100vh;
-  background-color: var(--dark-mode-bg-color);
-  color: var(--dark-mode-main-text);
-  font-family:var(--sans);
-  
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--sans);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
