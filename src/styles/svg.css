@@ -1,8 +1,7 @@
 /* General icons */
 .icon {
 }
-.github-icon {
-}
+
 .infinite-icon {
 }
 .link-icon {
@@ -38,6 +37,7 @@
 
 /* Tech icons */
 .tech-icon {
+  color: #a8b2d8;
 }
 .tech-icon.css:hover {
   color: #663399;
