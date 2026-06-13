@@ -7,7 +7,7 @@ import JavaIcon from "../assets/favicon/tecnologies/JavaIcon";
 import NestJsIcon from "../assets/favicon/tecnologies/NestJs";
 import ExpressIcon from "../assets/favicon/tecnologies/ExpressIcon";
 import SupaBaseIcon from "../assets/favicon/tecnologies/SupaBaseIcon";
-import GithubIcon from "../assets/favicon/github_icon";
+import GithubIcon from "../assets/favicon/tecnologies/GitHubIcon";
 import GitIcon from "../assets/favicon/tecnologies/GitIcon";
 import ClaudeIcon from "../assets/favicon/tecnologies/ClaudeIcon";
 
@@ -17,21 +17,21 @@ export default function TechnologiesSection() {
       <h2>Tecnologías y herramientas</h2>
       <div className="technologies-grid">
         <CardTechnology title="Frontend">
-          <HtmlIcon />
-          <CssIcon />
-          <JsIcon />
-          <ReactIcon />
+          <HtmlIcon data-tech-name="HTML" />
+          <CssIcon data-tech-name="CSS" />
+          <JsIcon data-tech-name="JavaScript" />
+          <ReactIcon data-tech-name="React" />
         </CardTechnology>
         <CardTechnology title="Backend">
-          <JavaIcon />
-          <NestJsIcon />
-          <ExpressIcon />
+          <JavaIcon data-tech-name="Java" />
+          <NestJsIcon data-tech-name="NestJS" />
+          <ExpressIcon data-tech-name="Express" />
         </CardTechnology>
         <CardTechnology title="Tools">
-          <SupaBaseIcon />
-          <GithubIcon />
-          <GitIcon />
-          <ClaudeIcon />
+          <SupaBaseIcon data-tech-name="Supabase" />
+          <GithubIcon data-tech-name="GitHub" />
+          <GitIcon data-tech-name="Git" />
+          <ClaudeIcon data-tech-name="Claude" />
         </CardTechnology>
       </div>
     </section>
