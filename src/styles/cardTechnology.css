@@ -46,7 +46,14 @@
   color: #e6f9ff;
   z-index: 2;
 }
-
+.card-technology .card-header h3{
+  transition: all 0.5s ease;
+}
+.card-technology .card-header h3:hover{
+  text-shadow: 
+  1px 1px 0px #fff,
+  7px 9px 2px #00f0ff;
+}
 .card-technology .card-elements {
   position: relative;
   display: flex;
