@@ -6,6 +6,7 @@ import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
 import TechnologiesSection from "./sections/TechnologiesSection";
 import ProjectsSection from "./sections/ProjectsSection";
+import FooterSection from "./sections/FooterSection";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -22,6 +23,7 @@ export default function App() {
       <AboutSection />
       <TechnologiesSection />
       <ProjectsSection />
+      <FooterSection/>
     </>
   );
 }
