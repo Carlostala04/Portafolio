@@ -1,5 +1,5 @@
 import LinkIcon from "../assets/favicon/link_icon";
-import GithubIcon from "../assets/favicon/github_icon";
+import GithubIcon from "../assets/favicon/tecnologies/GitHubIcon";
 import "../styles/cardProject.css";
 import "../styles/svg.css";
 
