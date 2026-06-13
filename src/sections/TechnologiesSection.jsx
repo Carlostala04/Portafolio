@@ -10,6 +10,8 @@ import SupaBaseIcon from "../assets/favicon/tecnologies/SupaBaseIcon";
 import GithubIcon from "../assets/favicon/tecnologies/GitHubIcon";
 import GitIcon from "../assets/favicon/tecnologies/GitIcon";
 import ClaudeIcon from "../assets/favicon/tecnologies/ClaudeIcon";
+import MysqlIcon from "../assets/favicon/tecnologies/MySqlIcon"
+import PostgreSqlIcon from "../assets/favicon/tecnologies/PostgreSqlIcon"
 
 export default function TechnologiesSection() {
   return (
@@ -26,6 +28,10 @@ export default function TechnologiesSection() {
           <JavaIcon data-tech-name="Java" />
           <NestJsIcon data-tech-name="NestJS" />
           <ExpressIcon data-tech-name="Express" />
+        </CardTechnology>
+        <CardTechnology title={"Data Bases"}>
+          <MysqlIcon data-tech-name="MySQl"/>
+          <PostgreSqlIcon data-tech-name="PostgreSQL"/>
         </CardTechnology>
         <CardTechnology title="Tools">
           <SupaBaseIcon data-tech-name="Supabase" />
