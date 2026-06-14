@@ -1,4 +1,5 @@
 import InfiniteIcon from "../assets/favicon/infinite_icon";
+import Button from "../components/Button";
 import { useCalculateExperience } from "../hooks/calculateYearsExperience";
 
 export default function AboutSection() {
@@ -7,6 +8,7 @@ export default function AboutSection() {
   return (
     <section className="about">
       <div className="about-intro">
+        <h2>Sobre mi</h2>
         <h4>
           Hola, soy Carlos. Frontend developer dándole detalles únicos al
           software del futuro
@@ -22,8 +24,8 @@ export default function AboutSection() {
           dashboards densos hasta landings que tienen que cargar en 1.2s sobre
           3G. Me gusta el lado donde la ingeniería se vuelve diseño.
           <br />
-          Cuando no estoy en el editor: café de especialidad, fotografía
-          análoga y leer documentación por placer (sí, lo dije).
+          Cuando no estoy en el editor: café de especialidad, fotografía análoga
+          y leer documentación por placer (sí, lo dije).
         </p>
       </div>
       <div className="about-cards">
@@ -37,7 +39,6 @@ export default function AboutSection() {
           <InfiniteIcon />
           <span>Tazas de café</span>
         </article>
-        <div className="cv-button"></div>
       </div>
     </section>
   );
