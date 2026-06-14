@@ -5,8 +5,11 @@ import "../styles/header.css";
 export default function Header({ toggleTheme, darkMode }) {
   return (
     <header>
-      <span className="square"></span>
-      <h4>Carlos Talavera</h4>
+      <div className="name">
+        <span className="square"></span>
+        <h4>Carlos Talavera</h4>
+      </div>
+
       <nav className="nav-bar">
         <ul className="item-list">
           <li className="item">
@@ -31,11 +34,15 @@ export default function Header({ toggleTheme, darkMode }) {
           </li>
         </ul>
       </nav>
-      <div className="language-buttons">
-        <button>EN</button>
-        <button>ES</button>
+      <div className="action-buttons">
+        <div className="language-buttons">
+          <button>EN</button>
+          <button>ES</button>
+        </div>
+        <div className="theme-button">
+          <button onClick={toggleTheme}>{darkMode ? <Sun /> : <Moon />}</button>
+        </div>
       </div>
-      <button onClick={toggleTheme}>{darkMode ? <Sun /> : <Moon />}</button>
     </header>
   );
 }
