@@ -1,1 +1,119 @@
+header {
+  width: 100vw;
+  height: 10vh;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+  color: #fff;
+  border-bottom: 1px solid #424040c2;
+  backdrop-filter: blur(10px);
+}
 
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12%;
+  height: 100%;
+  gap: 12px;
+}
+
+.name .square {
+  width: 10px;
+  height: 10px;
+  background-color: #5fdde8;
+  box-shadow: 0px 0px 5px #5fdde8;
+  animation: squaremove 1s ease-in-out infinite;
+}
+
+.nav-bar {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.item-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.item {
+  display: flex;
+  text-decoration: none;
+}
+
+.item a {
+  text-decoration: none;
+  color: #6f6d6dc4;
+}
+.item a:hover {
+  color: #fff;
+  text-shadow: 0px 0px 4px #fff;
+}
+.item a::before {
+  content: "[";
+  color: #5fdde8;
+  opacity: 0;
+}
+.item a::after {
+  content: "]";
+  color: #5fdde8;
+  opacity: 0;
+}
+
+.item a:focus {
+  color: #5fdde8;
+  text-shadow: none;
+}
+.item a:focus::before,
+.item a:focus::after {
+  opacity: 1;
+}
+.action-buttons{
+  width: 10%;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.action-buttons button{
+  width: 36px;
+  height: 35px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #2d2e2e;
+}
+
+.theme-button button{
+  font-size: 20px;
+}
+.theme-button .icon{
+  margin-top: 4px;
+}
+.action-buttons button:focus{
+  background-color: #5fdde8;
+  color: #000;
+  border-color: #5fdde8;
+}
+@keyframes squaremove {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+}
