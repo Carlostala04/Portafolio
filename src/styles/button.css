@@ -1,4 +1,8 @@
 .button-default {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
   background-color: transparent;
   color: #5fdde8;
   border: 2px solid #5fdde8;
