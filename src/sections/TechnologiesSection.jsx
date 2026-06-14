@@ -12,7 +12,7 @@ import GitIcon from "../assets/favicon/tecnologies/GitIcon";
 import ClaudeIcon from "../assets/favicon/tecnologies/ClaudeIcon";
 import MysqlIcon from "../assets/favicon/tecnologies/MySqlIcon"
 import PostgreSqlIcon from "../assets/favicon/tecnologies/PostgreSqlIcon"
-
+import "../styles/tecnology.css"
 export default function TechnologiesSection() {
   return (
     <section className="technologies">
