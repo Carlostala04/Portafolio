@@ -1,0 +1,135 @@
+.about {
+  width: 100%;
+  padding: 100px 10% 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* ── Header ── */
+.about-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.about-section-label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-label-line {
+  width: 160px;
+  height: 1px;
+  background-color: var(--color-text-faint);
+}
+
+.about-section-label span {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--color-text-faint);
+  text-transform: uppercase;
+}
+
+.about-title {
+  font-family: var(--display);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+
+/* ── Two-column content ── */
+.about-content {
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ── Left column ── */
+.about-intro-text {
+  font-family: var(--display);
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-text);
+}
+
+.about-accent {
+  color: var(--color-accent);
+  text-shadow: 0 0 12px rgba(95, 221, 232, 0.4);
+}
+
+/* ── Right column ── */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-body p {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--color-text-soft);
+}
+
+/* ── Stat cards ── */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.about-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 16px 20px;
+  border: 1px solid var(--color-text-faint);
+  background-color: var(--color-bg-card);
+  overflow: hidden;
+}
+
+.about-card + .about-card {
+  border-left: none;
+}
+
+.about-card::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-accent);
+}
+
+.about-card-stat {
+  font-family: var(--display);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.about-card-label {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--color-text-faint);
+  text-transform: uppercase;
+}
