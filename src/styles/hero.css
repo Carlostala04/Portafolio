@@ -1,0 +1,62 @@
+img {
+  width: 400px;
+  height: 450px;
+  border-radius: 10px;
+}
+.hero {
+  width: 100vw;
+  height: 760px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.hero-name {
+  width: 10%;
+  font-size: 6.5em;
+  text-shadow: 0px 0px 7px #fff;
+}
+.hero-name::after {
+  content: "_";
+  height: 10px;
+  position: absolute;
+  top: 49%;
+  right: 64%;
+  color: #5fdde8;
+  text-shadow: 0 0 8px #5fdde8;
+  animation: line 1s step-start infinite;
+}
+.key-word {
+  color: #5fdde8;
+  text-shadow: 0px 0px 7px #5fdde8;
+}
+.card-box {
+  margin: 100px;
+  width: 400px;
+  height: 450px;
+  position: relative;
+  perspective: 1000px;
+  border-radius: 10px;
+}
+
+.card-box:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
+}
+
+.card-face {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card-face.card-back {
+  transform: rotateY(180deg);
+}
+@keyframes line {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
