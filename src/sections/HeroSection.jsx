@@ -1,4 +1,6 @@
 import Perfil from "../../public/perfil.png";
+import Button from "../components/Button";
+import Talk from "../assets/favicon/talk_icon"
 import "../styles/hero.css";
 export default function HeroSection({ darkMode }) {
   const avatarSrc = darkMode
@@ -25,7 +27,9 @@ export default function HeroSection({ darkMode }) {
             <img src={avatarSrc} />
           </div>
         </div>
+        
       </div>
+      <Button title={"Hablemos"} Icon={<Talk/>}/>
     </section>
   );
 }
