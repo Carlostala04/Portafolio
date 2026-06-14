@@ -56,7 +56,7 @@ header {
 .item a {
   text-decoration: none;
   color: #6f6d6dc4;
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .item a:hover {
   color: #fff;
@@ -81,36 +81,36 @@ header {
 .item a:focus::after {
   opacity: 1;
 }
-.action-buttons{
+.action-buttons {
   width: 10%;
   height: 100%;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
 
-.action-buttons button{
+.action-buttons button {
   width: 36px;
   height: 35px;
   background-color: #000;
   color: #fff;
   text-align: center;
   border: 1px solid #2d2e2e;
-  transition: border .5s ease;
+  transition: border 0.5s ease;
 }
 
-.action-buttons button:hover{
+.action-buttons button:hover {
   border-color: #5fdde8;
 }
 
-.theme-button button{
+.theme-button button {
   font-size: 20px;
 }
-.theme-button .icon{
+.theme-button .icon {
   margin-top: 4px;
 }
-.action-buttons button:focus{
+.action-buttons button:focus {
   background-color: #5fdde8;
   color: #000;
   border-color: #5fdde8;
