@@ -11,6 +11,7 @@ header {
   color: #fff;
   border-bottom: 1px solid #424040c2;
   backdrop-filter: blur(10px);
+  z-index: 3;
 }
 
 .name {
