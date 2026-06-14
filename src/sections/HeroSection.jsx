@@ -29,7 +29,7 @@ export default function HeroSection({ darkMode }) {
         </div>
         
       </div>
-      <Button title={"Hablemos"} Icon={<Talk/>}/>
+      <Button title={"Hablemos"} Icon={<Talk/>} />
     </section>
   );
 }
