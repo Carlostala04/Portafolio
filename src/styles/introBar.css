@@ -1,0 +1,57 @@
+:root {
+  --flag-url: url("https://flagcdn.com/24x18/cr.png");
+}
+
+.intro-bar {
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.comment-data {
+  font-size: 16px;
+  color: gray;
+  margin-right: 10px;
+}
+.intro-bar-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.data {
+  color: #fff;
+  text-shadow: 0px 0px 5px #5fdde8;
+  text-align: center;
+}
+.data-flag {
+  cursor: default;
+  padding-left: 30px;
+}
+
+.data-flag::after {
+  content: "";
+  background-image: var(--flag-url);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 24px;
+  height: 18px;
+  vertical-align: middle;
+  margin-left: 8px;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  transform: translateX(-6px);
+}
+
+.data-flag:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
