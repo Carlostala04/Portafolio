@@ -1,5 +1,5 @@
 import Perfil from "../../public/perfil.png";
-
+import "../styles/hero.css";
 export default function HeroSection({ darkMode }) {
   const avatarSrc = darkMode
     ? "/avatar/dark-mode-avatar.png"
@@ -9,20 +9,20 @@ export default function HeroSection({ darkMode }) {
     <section className="hero">
       <div className="hero-info">
         <h1 className="hero-name">
-          Carlos Tala<span>vera</span>
+          Carlos Tala<span className="key-word">vera</span>
         </h1>
         <p className="hero-tagline">
-          <span className="perfil-bars">//</span>
+          <span className="comment-mark">//</span>
           Me gusta construir software para el futuro
         </p>
       </div>
-      <div className="hero-photo">
-        <div className="card-photo">
+      <div className="card-box">
+        <div className="card">
           <div className="card-face">
-            <img src={Perfil} alt="Carlos Talavera" />
+            <img src={Perfil} />
           </div>
-          <div className="card-behind">
-            <img src={avatarSrc} alt="avatar" />
+          <div className="card-face card-back">
+            <img src={avatarSrc} />
           </div>
         </div>
       </div>
