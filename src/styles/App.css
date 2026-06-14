@@ -1,3 +1,9 @@
+@property --bg-grid {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgba(63, 141, 155, 0.07);
+}
+
 :root {
   --bg: #07090c;
   --bg-grid: rgba(63, 141, 155, 0.07);
@@ -44,6 +50,7 @@
 
 /* Sobreescribir variables semánticas al cambiar a tema claro */
 [data-theme="light"] {
+  --bg-grid: rgba(45, 123, 137, 0.1);
   --color-bg: var(--light-bg);
   --color-bg-soft: var(--light-bg-soft);
   --color-bg-card: var(--light-bg-card);
@@ -62,7 +69,8 @@
 }
 
 body {
-  background-color: var(--bg);
+  transition: --bg-grid 0.4s ease, background-color 0.4s ease;
+  background-color: var(--color-bg);
 
   /* Rejilla 56×56 */
   background-image:
