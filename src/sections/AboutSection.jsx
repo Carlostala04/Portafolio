@@ -28,12 +28,12 @@ export default function AboutSection() {
         <div className="about-right">
           <div className="about-body">
             <p>
-              Hace cinco años descubrí que escribir CSS me daba la misma
+              Hace cinco años descubrí que construir software me daba la misma
               satisfacción que armar un mueble: ver cómo las piezas encajan y
               todo se sostiene solo. Desde ahí no he parado.
             </p>
             <p>
-              Hoy trabajo con React, Node y Java construyendo productos web —
+              Hoy trabajo con React, Node y NestJS construyendo productos web —
               desde dashboards densos hasta landings que tienen que cargar en
               1.2s sobre 3G. Me gusta el lado donde la ingeniería se vuelve
               diseño.
