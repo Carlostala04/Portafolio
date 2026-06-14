@@ -56,6 +56,7 @@ header {
 .item a {
   text-decoration: none;
   color: #6f6d6dc4;
+  transition: all .1s ease-in-out;
 }
 .item a:hover {
   color: #fff;
@@ -96,6 +97,11 @@ header {
   color: #fff;
   text-align: center;
   border: 1px solid #2d2e2e;
+  transition: border .5s ease;
+}
+
+.action-buttons button:hover{
+  border-color: #5fdde8;
 }
 
 .theme-button button{
