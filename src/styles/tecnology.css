@@ -1,0 +1,26 @@
+.technologies {
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.technologies h2 {
+  font-family: var(--display);
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 700;
+  text-shadow: 0px 0px 5px #fff;
+}
+
+.technologies-grid{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
