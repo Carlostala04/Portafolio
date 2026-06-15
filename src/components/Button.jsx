@@ -1,14 +1,16 @@
-import React from "react";
 import "../styles/button.css";
 
-export default function Button({ title, Icon: icon, href, target }) {
+export default function Button({ title, Icon: icon, href, target, className, style }) {
+  const cls = `button-default${className ? ` ${className}` : ""}`;
+
   if (href) {
     return (
       <a
-        className="button-default"
+        className={cls}
         href={href}
         target={target}
         rel={target === "_blank" ? "noopener noreferrer" : undefined}
+        style={style}
       >
         {title} {icon}
       </a>
@@ -16,7 +18,7 @@ export default function Button({ title, Icon: icon, href, target }) {
   }
 
   return (
-    <button className="button-default">
+    <button className={cls} style={style}>
       {title} {icon}
     </button>
   );
