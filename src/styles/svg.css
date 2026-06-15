@@ -55,3 +55,7 @@
 [data-theme="light"] .tech-icon.express:hover {
   color: #000;
 }
+
+[data-theme="light"] .tech-icon.github:hover{
+  color: #000;
+}
