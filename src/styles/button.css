@@ -1,18 +1,21 @@
 .button-default {
   cursor: pointer;
-  font-family: inherit;
-  font-size: inherit;
+  font-family: var(--mono);
+  font-size: 0.88rem;
   text-decoration: none;
   background-color: transparent;
-  color: #5fdde8;
-  border: 2px solid #5fdde8;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
   position: relative;
-  width: 150px;
+  min-width: 150px;
   height: 50px;
-  display: flex;
+  padding: 0 1.25rem;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  transition: color 0.3s ease;
+  overflow: hidden;
 }
 
 .button-default::after {
@@ -22,7 +25,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #5fdde8;
+  background-color: var(--color-accent);
   transition: width 0.3s ease;
   z-index: -1;
 }
@@ -32,5 +35,5 @@
 }
 
 .button-default:hover {
-  color: #000;
+  color: var(--color-under-accent);
 }
