@@ -1,25 +1,27 @@
 .card-project {
-  width: 500px;
-  height: 230px;
+  width: clamp(300px, 45vw, 560px);
+  min-height: 280px;
   background-color: var(--color-bg-card);
   border: 1px solid rgba(128, 128, 128, 0.15);
   border-radius: 14px;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 42% 58%;
   grid-template-rows: 1fr auto auto;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease, filter 0.2s ease;
   cursor: default;
 }
 
 .card-project:hover {
   border-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
   transform: translateY(-3px);
+  filter: drop-shadow(3px 4px 7px color-mix(in srgb, var(--color-accent) 50%, transparent));
 }
 
+/* ── Image ── */
 .card-project-image {
   grid-column: 1;
-  grid-row: 1 / 3;
+  grid-row: 1 / 4;
   background-color: var(--color-bg-soft);
   overflow: hidden;
 }
@@ -31,13 +33,14 @@
   display: block;
 }
 
+/* ── Description ── */
 .card-project-description {
   grid-column: 2;
   grid-row: 1;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 20px 18px 10px 18px;
+  padding: 20px 18px 10px;
 }
 
 .card-project-description h4 {
@@ -52,7 +55,7 @@
 .card-project-description p {
   font-size: 0.78rem;
   color: var(--color-text-soft);
-  line-height: 1.5;
+  line-height: 1.55;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   line-clamp: 3;
@@ -60,13 +63,14 @@
   overflow: hidden;
 }
 
+/* ── Technologies ── */
 .card-project-technologies {
   grid-column: 2;
   grid-row: 2;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  padding: 0 18px 8px 18px;
+  padding: 0 18px 8px;
 }
 
 .card-project-technologies .tech {
@@ -84,13 +88,14 @@
   height: 20px;
 }
 
+/* ── Actions ── */
 .card-project-actions {
   grid-column: 2;
   grid-row: 3;
   display: flex;
   gap: 8px;
   align-items: center;
-  padding: 0 18px 16px 18px;
+  padding: 0 18px 16px;
 }
 
 .card-project-actions a {
@@ -118,4 +123,33 @@
 .card-project-actions a svg {
   width: 13px;
   height: 13px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .card-project {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px auto auto auto;
+  }
+
+  .card-project-image {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .card-project-description {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .card-project-technologies {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .card-project-actions {
+    grid-column: 1;
+    grid-row: 4;
+  }
 }
