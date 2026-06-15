@@ -10,9 +10,6 @@ import "../styles/button.css";
 
 export default function HeroSection({ darkMode }) {
   const { t } = useTranslation();
-  const avatarSrc = darkMode
-    ? "/avatar/dark-mode-avatar.png"
-    : "/avatar/light-mode-avatar.png";
 
   const GmailIcon = darkMode ? GmailDark : GmailLight;
   const LinkedInIcon = darkMode ? LinkedInDark : LinkedInLight;
@@ -60,7 +57,7 @@ export default function HeroSection({ darkMode }) {
             <img src={Perfil} alt="Carlos Talavera" />
           </div>
           <div className="card-face card-back">
-            <img src={avatarSrc} alt="Avatar" />
+            <img src={"/Elegante.png"} alt="Avatar" />
           </div>
         </div>
       </div>
