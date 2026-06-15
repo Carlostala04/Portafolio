@@ -9,7 +9,7 @@ export const projects = [
     id: 1,
     image: "/proyectImages/mediRecord.png",
     title: "MediRecord",
-    description: "Sistema web para gestionar pacientes, consultas e historial médico.",
+    descriptionKey: "projectsData.mediRecord",
     repository: "https://github.com/usuario/medirecord",
     preview: "https://medirecord-demo.com",
     technologies: [
@@ -23,7 +23,7 @@ export const projects = [
     id: 2,
     image: "/proyectImages/myFarrmer.png",
     title: "My Farmer",
-    description: "Aplicación mobile de gestión de animales y cultivos para ganaderos.",
+    descriptionKey: "projectsData.myFarmer",
     repository: "https://github.com/Carlostala04/My-Farmer.git",
     preview: "#",
     technologies: [
