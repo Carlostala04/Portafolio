@@ -27,8 +27,14 @@ export default function HeroSection({ darkMode }) {
           {t("hero.tagline")}
         </p>
 
-        <div className="hero-contacts reveal-load" style={{ "--load-delay": "0.3s" }}>
-          <a href="mailto:carlostala.dev@gmail.com" className="button-default hero-contact-btn">
+        <div
+          className="hero-contacts reveal-load"
+          style={{ "--load-delay": "0.3s" }}
+        >
+          <a
+            href="mailto:carlostala.dev@gmail.com"
+            className="button-default hero-contact-btn"
+          >
             <GmailIcon className="hero-contact-icon" />
             carlostala.dev@gmail.com
           </a>
@@ -56,7 +62,10 @@ export default function HeroSection({ darkMode }) {
       <div className="card-box reveal-load" style={{ "--load-delay": "0.2s" }}>
         <div className="card">
           <div className="card-face">
-            <img src={darkMode?"/public/Perfil.png":"/public/Elegante.png"} alt="Carlos Talavera" />
+            <img
+              src={darkMode ? "/Perfil.png" : "/Elegante.png"}
+              alt="Carlos Talavera"
+            />
           </div>
           <div className="card-face card-back">
             <img src={avatarSrc} alt="Avatar" />
