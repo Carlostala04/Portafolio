@@ -22,9 +22,13 @@ export default function TechnologiesSection() {
 
   return (
     <section id="technologies" className="technologies" ref={ref}>
-      <h2 className={`reveal${visible ? " visible" : ""}`}>
-        {t("technologies.title")}
-      </h2>
+      <div className={`section-header reveal${visible ? " visible" : ""}`}>
+        <div className="section-label">
+          <div className="section-label-line" />
+          <span>{t("technologies.label")}</span>
+        </div>
+        <h2 className="technologies-title">{t("technologies.title")}</h2>
+      </div>
       <div className="technologies-grid">
         {[
           {

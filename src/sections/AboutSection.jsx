@@ -13,9 +13,9 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="about" ref={ref}>
-      <div className={`about-header ${rv}`}>
-        <div className="about-section-label">
-          <div className="about-label-line" />
+      <div className={`section-header ${rv}`}>
+        <div className="section-label">
+          <div className="section-label-line" />
           <span>{t("about.label")}</span>
         </div>
         <h2 className="about-title">{t("about.title")}</h2>

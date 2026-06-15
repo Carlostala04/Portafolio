@@ -11,9 +11,15 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="projects" ref={ref}>
-      <div className={`projects-section-header reveal${visible ? " visible" : ""}`}>
-        <Code />
-        <h2>{t("projects.title")}</h2>
+      <div className={`section-header reveal${visible ? " visible" : ""}`}>
+        <div className="section-label">
+          <div className="section-label-line" />
+          <span>{t("projects.label")}</span>
+        </div>
+        <div className="projects-section-title">
+          <Code />
+          <h2>{t("projects.title")}</h2>
+        </div>
       </div>
       <div className="projects-container">
         {projects.map((project, i) => (

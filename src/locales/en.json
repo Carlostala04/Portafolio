@@ -31,6 +31,7 @@
     "downloadCv": "DOWNLOAD CV"
   },
   "technologies": {
+    "label": "02 · TECHNOLOGIES",
     "title": "Technologies & Tools",
     "frontend": "Frontend",
     "backend": "Backend",
@@ -38,6 +39,7 @@
     "tools": "Tools"
   },
   "projects": {
+    "label": "03 · PROJECTS",
     "title": "Projects",
     "repository": "Repository",
     "preview": "Live preview"

@@ -8,13 +8,15 @@
   gap: 4rem;
 }
 
-.technologies h2 {
+.technologies-title {
   font-family: var(--display);
   font-size: clamp(2rem, 7vw, 5rem);
   font-weight: 700;
   color: var(--color-text);
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.15);
-  text-align: center;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
 }
 
 .technologies-grid {
