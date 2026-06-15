@@ -1,4 +1,6 @@
+import { useTranslation } from "react-i18next";
 import CardTechnology from "../components/CardTechnology";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 import HtmlIcon from "../assets/favicon/tecnologies/HtmlIcon";
 import CssIcon from "../assets/favicon/tecnologies/CssIcon";
 import JsIcon from "../assets/favicon/tecnologies/JsIcon";
@@ -10,35 +12,67 @@ import SupaBaseIcon from "../assets/favicon/tecnologies/SupaBaseIcon";
 import GithubIcon from "../assets/favicon/tecnologies/GitHubIcon";
 import GitIcon from "../assets/favicon/tecnologies/GitIcon";
 import ClaudeIcon from "../assets/favicon/tecnologies/ClaudeIcon";
-import MysqlIcon from "../assets/favicon/tecnologies/MySqlIcon"
-import PostgreSqlIcon from "../assets/favicon/tecnologies/PostgreSqlIcon"
-import "../styles/tecnology.css"
+import MysqlIcon from "../assets/favicon/tecnologies/MySqlIcon";
+import PostgreSqlIcon from "../assets/favicon/tecnologies/PostgreSqlIcon";
+import "../styles/tecnology.css";
+
 export default function TechnologiesSection() {
+  const { t } = useTranslation();
+  const [ref, visible] = useScrollReveal();
+
   return (
-    <section className="technologies">
-      <h2>Tecnologías y herramientas</h2>
+    <section id="technologies" className="technologies" ref={ref}>
+      <h2 className={`reveal${visible ? " visible" : ""}`}>
+        {t("technologies.title")}
+      </h2>
       <div className="technologies-grid">
-        <CardTechnology title="Frontend">
-          <HtmlIcon data-tech-name="HTML" />
-          <CssIcon data-tech-name="CSS" />
-          <JsIcon data-tech-name="JavaScript" />
-          <ReactIcon data-tech-name="React" />
-        </CardTechnology>
-        <CardTechnology title="Backend">
-          <JavaIcon data-tech-name="Java" />
-          <NestJsIcon data-tech-name="NestJS" />
-          <ExpressIcon data-tech-name="Express" />
-        </CardTechnology>
-        <CardTechnology title={"Data Bases"}>
-          <MysqlIcon data-tech-name="MySQl"/>
-          <PostgreSqlIcon data-tech-name="PostgreSQL"/>
-        </CardTechnology>
-        <CardTechnology title="Tools">
-          <SupaBaseIcon data-tech-name="Supabase" />
-          <GithubIcon data-tech-name="GitHub" />
-          <GitIcon data-tech-name="Git" />
-          <ClaudeIcon data-tech-name="Claude" />
-        </CardTechnology>
+        {[
+          {
+            titleKey: "technologies.frontend",
+            icons: [
+              { Icon: HtmlIcon, name: "HTML" },
+              { Icon: CssIcon, name: "CSS" },
+              { Icon: JsIcon, name: "JavaScript" },
+              { Icon: ReactIcon, name: "React" },
+            ],
+          },
+          {
+            titleKey: "technologies.backend",
+            icons: [
+              { Icon: JavaIcon, name: "Java" },
+              { Icon: NestJsIcon, name: "NestJS" },
+              { Icon: ExpressIcon, name: "Express" },
+            ],
+          },
+          {
+            titleKey: "technologies.databases",
+            icons: [
+              { Icon: MysqlIcon, name: "MySQL" },
+              { Icon: PostgreSqlIcon, name: "PostgreSQL" },
+            ],
+          },
+          {
+            titleKey: "technologies.tools",
+            icons: [
+              { Icon: SupaBaseIcon, name: "Supabase" },
+              { Icon: GithubIcon, name: "GitHub" },
+              { Icon: GitIcon, name: "Git" },
+              { Icon: ClaudeIcon, name: "Claude" },
+            ],
+          },
+        ].map((group, i) => (
+          <div
+            key={group.titleKey}
+            className={`reveal${visible ? " visible" : ""}`}
+            style={{ "--reveal-delay": `${i * 100}ms` }}
+          >
+            <CardTechnology title={t(group.titleKey)}>
+              {group.icons.map(({ Icon, name }) => (
+                <Icon key={name} data-tech-name={name} />
+              ))}
+            </CardTechnology>
+          </div>
+        ))}
       </div>
     </section>
   );
