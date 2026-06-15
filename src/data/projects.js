@@ -3,6 +3,7 @@ import CssIcon from "../assets/favicon/tecnologies/CssIcon";
 import SupaBaseIcon from "../assets/favicon/tecnologies/SupaBaseIcon";
 import PostgreSqlIcon from "../assets/favicon/tecnologies/PostgreSqlIcon";
 import NestJsIcon from "../assets/favicon/tecnologies/NestJs";
+import Electron from "../assets/favicon/tecnologies/Electron"
 
 export const projects = [
   {
@@ -17,6 +18,7 @@ export const projects = [
       { name: "CSS", Icon: CssIcon },
       { name: "Supabase", Icon: SupaBaseIcon },
       { name: "PostgreSQL", Icon: PostgreSqlIcon },
+      {name:"Electron",Icon:Electron}
     ],
   },
   {

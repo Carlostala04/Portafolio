@@ -5,19 +5,48 @@
 }
 
 /* Per-technology hover colors */
-.tech-icon.css:hover        { color: #663399; }
-.tech-icon.express:hover    { color: #fff; }
-.tech-icon.github:hover     { color: #fff; }
-.tech-icon.html:hover       { color: #e34f26; }
-.tech-icon.java:hover       { color: #ed8b00; }
-.tech-icon.js:hover         { color: #f7df1e; }
-.tech-icon.mysql:hover      { color: #22547a; }
-.tech-icon.nestjs:hover     { color: #e0234e; }
-.tech-icon.postgresql:hover { color: #4169e1; }
-.tech-icon.react:hover      { color: #61dafb; }
-.tech-icon.supabase:hover   { color: #3fcf8e; }
-.tech-icon.claude:hover     { color: #d97706; }
-.tech-icon.git:hover        { color: #e34f26; }
+.tech-icon.css:hover {
+  color: #663399;
+}
+.tech-icon.express:hover {
+  color: #fff;
+}
+.tech-icon.github:hover {
+  color: #fff;
+}
+.tech-icon.html:hover {
+  color: #e34f26;
+}
+.tech-icon.java:hover {
+  color: #ed8b00;
+}
+.tech-icon.js:hover {
+  color: #f7df1e;
+}
+.tech-icon.mysql:hover {
+  color: #22547a;
+}
+.tech-icon.nestjs:hover {
+  color: #e0234e;
+}
+.tech-icon.postgresql:hover {
+  color: #4169e1;
+}
+.tech-icon.react:hover {
+  color: #61dafb;
+}
+.tech-icon.supabase:hover {
+  color: #3fcf8e;
+}
+.tech-icon.claude:hover {
+  color: #d97706;
+}
+.tech-icon.git:hover {
+  color: #e34f26;
+}
+.tech-icon.electron:hover {
+  color: #47848f;
+}
 
 [data-theme="light"] .tech-icon {
   color: #4a5568;
