@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import Perfil from "../../public/perfil.png";
 import GmailDark from "../assets/favicon/dark-mode-icon/gmail_icon_dark";
 import GmailLight from "../assets/favicon/light-mode-icon/gmail_icon_light";
 import LinkedInDark from "../assets/favicon/dark-mode-icon/linkedin_icon_dark";
@@ -12,9 +13,7 @@ export default function HeroSection({ darkMode }) {
   const avatarSrc = darkMode
     ? "/avatar/dark-mode-avatar.png"
     : "/avatar/light-mode-avatar.png";
-  const perfilPicture = darkMode 
-  ? "/Perfil.png" 
-  : "/Elegante.png";
+
   const GmailIcon = darkMode ? GmailDark : GmailLight;
   const LinkedInIcon = darkMode ? LinkedInDark : LinkedInLight;
 
@@ -29,14 +28,8 @@ export default function HeroSection({ darkMode }) {
           {t("hero.tagline")}
         </p>
 
-        <div
-          className="hero-contacts reveal-load"
-          style={{ "--load-delay": "0.3s" }}
-        >
-          <a
-            href="mailto:carlostala.dev@gmail.com"
-            className="button-default hero-contact-btn"
-          >
+        <div className="hero-contacts reveal-load" style={{ "--load-delay": "0.3s" }}>
+          <a href="mailto:carlostala.dev@gmail.com" className="button-default hero-contact-btn">
             <GmailIcon className="hero-contact-icon" />
             carlostala.dev@gmail.com
           </a>
@@ -64,7 +57,7 @@ export default function HeroSection({ darkMode }) {
       <div className="card-box reveal-load" style={{ "--load-delay": "0.2s" }}>
         <div className="card">
           <div className="card-face">
-            <img src={perfilPicture} alt="Carlos Talavera" />
+            <img src={Perfil} alt="Carlos Talavera" />
           </div>
           <div className="card-face card-back">
             <img src={avatarSrc} alt="Avatar" />
