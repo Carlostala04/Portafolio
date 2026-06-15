@@ -12,18 +12,23 @@ export default function App() {
   const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", darkMode ? "dark" : "light");
+    document.documentElement.setAttribute(
+      "data-theme",
+      darkMode ? "dark" : "light"
+    );
   }, [darkMode]);
 
   return (
     <>
       <Header toggleTheme={() => setDarkMode(!darkMode)} darkMode={darkMode} />
-      <IntroBar />
-      <HeroSection darkMode={darkMode} />
-      <AboutSection />
-      <TechnologiesSection />
-      <ProjectsSection />
-      <FooterSection/>
+      <main>
+        <IntroBar />
+        <HeroSection darkMode={darkMode} />
+        <AboutSection />
+        <TechnologiesSection />
+        <ProjectsSection />
+      </main>
+      <FooterSection />
     </>
   );
 }
