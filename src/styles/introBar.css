@@ -2,40 +2,49 @@
   --flag-url: url("https://flagcdn.com/24x18/cr.png");
 }
 
+/* ── Desktop: fila horizontal con separadores verticales ── */
 .intro-bar {
   width: 100%;
-  min-height: 160px;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 2rem 5%;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.comment-data {
-  font-family: var(--mono);
-  font-size: 0.9rem;
-  color: var(--color-text-faint);
+  align-items: stretch;
+  justify-content: center;
+  border-top: 1px solid rgba(128, 128, 128, 0.1);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
 }
 
 .intro-bar-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  gap: 8px;
+  padding: 2rem 4rem;
+  border-right: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+.intro-bar-item:first-child {
+  border-left: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+.comment-data {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--color-text-faint);
+  letter-spacing: 0.04em;
 }
 
 .data {
-  color: var(--color-text);
-  text-shadow: 0 0 5px var(--color-accent);
-  text-align: center;
+  font-family: var(--display);
+  font-weight: 600;
   font-size: 1rem;
+  color: var(--color-text);
+  text-align: center;
+  text-shadow: 0 0 8px color-mix(in srgb, var(--color-accent) 35%, transparent);
 }
 
+/* ── Costa Rica flag ── */
 .data-flag {
   cursor: default;
-  padding-left: 30px;
 }
 
 .data-flag::after {
@@ -59,14 +68,56 @@
   transform: translateX(0);
 }
 
+/* ── Tablet ── */
+@media (max-width: 900px) {
+  .intro-bar-item {
+    padding: 1.75rem 2.5rem;
+  }
+}
+
+/* ── Mobile: columna vertical, label izquierda / valor derecha ── */
 @media (max-width: 640px) {
   .intro-bar {
-    gap: 1.5rem;
-    min-height: auto;
-    padding: 1.5rem 1.25rem;
+    flex-direction: column;
+    border-top: none;
+    border-bottom: none;
+    padding: 0 1.25rem;
   }
 
   .intro-bar-item {
-    flex: 1 1 120px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 0;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+    gap: 1rem;
+  }
+
+  .intro-bar-item:first-child {
+    border-left: none;
+    border-top: 1px solid rgba(128, 128, 128, 0.1);
+  }
+
+  .intro-bar-item:last-child {
+    border-bottom: none;
+  }
+
+  .data {
+    text-align: right;
+  }
+}
+
+/* ── Extra small: stack vertical ── */
+@media (max-width: 360px) {
+  .intro-bar-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .data {
+    text-align: left;
   }
 }
