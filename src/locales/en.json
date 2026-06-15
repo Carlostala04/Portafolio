@@ -1,4 +1,53 @@
 {
-  "welcome": "Bienvenido",
-  "description": "Esta es una aplicación en React"
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "stacks": "Stacks",
+    "contact": "Contact"
+  },
+  "introBar": {
+    "commentName": "// Carlos Talavera",
+    "commentStatus": "// Status",
+    "commentLocation": "// Location",
+    "role": "Frontend / React",
+    "status": "Available · Q3 2026",
+    "location": "Costa Rica"
+  },
+  "hero": {
+    "tagline": "I like building software for the future",
+    "cta": "Let's talk"
+  },
+  "about": {
+    "label": "01 · ABOUT ME",
+    "title": "ABOUT ME",
+    "intro_1": "Hi, I'm Carlos. Frontend developer obsessed with the ",
+    "intro_accent": "details",
+    "intro_2": " nobody asks for but everyone feels.",
+    "p1": "Five years ago I discovered that building software gave me the same satisfaction as assembling furniture: seeing how the pieces fit and everything holds together. Since then I haven't stopped.",
+    "p2": "Today I work with React, Node and NestJS building web products — from dense dashboards to landings that have to load in 1.2s on 3G. I like the side where engineering becomes design.",
+    "p3": "When I'm not in the editor: specialty coffee, video games, hardware and reading documentation for fun (yes, I said it).",
+    "yearsBuilding": "YEARS BUILDING",
+    "coffeeCups": "COFFEE CUPS",
+    "downloadCv": "DOWNLOAD CV"
+  },
+  "technologies": {
+    "title": "Technologies & Tools",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Databases",
+    "tools": "Tools"
+  },
+  "projects": {
+    "title": "Projects",
+    "repository": "Repository",
+    "preview": "Live preview"
+  },
+  "projectsData": {
+    "mediRecord": "Web system to manage patients, appointments and medical history.",
+    "myFarmer": "Mobile app for managing livestock and crops for farmers."
+  },
+  "footer": {
+    "getInTouch": "Get in touch",
+    "rights": "All rights reserved · Carlos Talavera"
+  }
 }
