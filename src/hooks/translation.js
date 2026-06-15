@@ -6,18 +6,12 @@ import en from "../locales/en.json";
 
 i18n.use(initReactI18next).init({
   resources: {
-    es: {
-      translation: es,
-    },
-    en: {
-      translation: en,
-    },
+    es: { translation: es },
+    en: { translation: en },
   },
-  lng: localStorage.getItem("language") || es,
+  lng: localStorage.getItem("language") || "es",
   fallbackLng: "es",
-  interpolation: {
-    escapeValue: false,
-  },
+  interpolation: { escapeValue: false },
 });
 
 export default i18n;
