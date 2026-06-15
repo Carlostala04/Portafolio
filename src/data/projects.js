@@ -21,7 +21,7 @@ export const projects = [
   },
   {
     id: 2,
-    image: "/proyectImages/myFarrmer.png",
+    image: "public/proyectImages/myFarmer.png",
     title: "My Farmer",
     descriptionKey: "projectsData.myFarmer",
     repository: "https://github.com/Carlostala04/My-Farmer.git",
