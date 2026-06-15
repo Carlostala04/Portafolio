@@ -10,7 +10,7 @@ export const projects = [
     image: "/proyectImages/mediRecord.png",
     title: "MediRecord",
     descriptionKey: "projectsData.mediRecord",
-    repository: "https://github.com/usuario/medirecord",
+    repository: "https://github.com/Carlostala04/Gestion-pacientes.git",
     preview: "https://medirecord-demo.com",
     technologies: [
       { name: "React", Icon: ReactIcon },
