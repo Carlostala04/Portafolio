@@ -5,10 +5,10 @@
 }
 
 :root {
-  --bg: #07090c;
   --bg-grid: rgba(63, 141, 155, 0.07);
   --accent-glow-soft: rgba(95, 221, 232, 0.12);
-  /* Paleta oscura */
+
+  /* Dark palette */
   --dark-bg: #07090c;
   --dark-bg-soft: #0d1116;
   --dark-bg-card: #0b1015;
@@ -20,7 +20,7 @@
   --dark-under-accent: #051114;
   --dark-warn: #ffb547;
 
-  /* Paleta clara */
+  /* Light palette */
   --light-bg: #f0f2f1;
   --light-bg-soft: #e3e7e7;
   --light-bg-card: #f7f9f9;
@@ -31,7 +31,7 @@
   --light-text-faint: #6e7a7e;
   --light-under-accent: #e8f4f6;
 
-  /* Variables semánticas — por defecto tema oscuro */
+  /* Semantic tokens — dark by default */
   --color-bg: var(--dark-bg);
   --color-bg-soft: var(--dark-bg-soft);
   --color-bg-card: var(--dark-bg-card);
@@ -42,15 +42,15 @@
   --color-text-faint: var(--dark-text-faint);
   --color-under-accent: var(--dark-under-accent);
 
-  /* Tipografías */
+  /* Typography */
   --sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
   --display: "Space Grotesk", var(--sans);
 }
 
-/* Sobreescribir variables semánticas al cambiar a tema claro */
 [data-theme="light"] {
   --bg-grid: rgba(45, 123, 137, 0.1);
+  --accent-glow-soft: rgba(45, 123, 137, 0.1);
   --color-bg: var(--light-bg);
   --color-bg-soft: var(--light-bg-soft);
   --color-bg-card: var(--light-bg-card);
@@ -68,24 +68,25 @@
   box-sizing: border-box;
 }
 
-body {
-  transition: --bg-grid 0.4s ease, background-color 0.4s ease;
-  background-color: var(--color-bg);
+html {
+  scroll-behavior: smooth;
+}
 
-  /* Rejilla 56×56 */
+body {
+  transition: --bg-grid 0.4s ease, background-color 0.4s ease, color 0.4s ease;
+  background-color: var(--color-bg);
   background-image:
     linear-gradient(var(--bg-grid) 1px, transparent 1px),
     linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px);
   background-size: 56px 56px;
   background-position: -1px -1px;
-
   position: relative;
   overflow-x: hidden;
   font-family: var(--mono);
-  color: #f7f9f9;
+  color: var(--color-text);
 }
 
-/* Halo radial cyan arriba */
+/* Radial cyan glow at top */
 body::before {
   content: "";
   position: fixed;
@@ -96,7 +97,7 @@ body::before {
   z-index: 0;
 }
 
-/* Scanlines (líneas horizontales sutiles) */
+/* Subtle scanlines */
 body::after {
   content: "";
   position: fixed;
@@ -105,4 +106,40 @@ body::after {
   pointer-events: none;
   z-index: 1;
   mix-blend-mode: overlay;
+}
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Load-time entrance (hero + intro bar) ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.reveal-load {
+  opacity: 0;
+  animation: fadeInUp 0.7s ease forwards;
+  animation-delay: var(--load-delay, 0s);
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-load {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
