@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import Perfil from "../../public/Perfil.png"
+import Elegante from "../../public/Elegante.png"
 import GmailDark from "../assets/favicon/dark-mode-icon/gmail_icon_dark";
 import GmailLight from "../assets/favicon/light-mode-icon/gmail_icon_light";
 import LinkedInDark from "../assets/favicon/dark-mode-icon/linkedin_icon_dark";
@@ -63,7 +65,7 @@ export default function HeroSection({ darkMode }) {
         <div className="card">
           <div className="card-face">
             <img
-              src={darkMode ? "/Perfil.png" : "/Elegante.png"}
+              src={darkMode ? Perfil : Elegante}
               alt="Carlos Talavera"
             />
           </div>
