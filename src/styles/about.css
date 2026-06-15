@@ -11,6 +11,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .about-section-label {
@@ -35,13 +37,13 @@
 
 .about-title {
   font-family: var(--display);
-  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-size: clamp(3rem, 8vw, 7rem);
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.02em;
   color: var(--color-text);
   text-transform: uppercase;
-  text-shadow: 0px 0px 5px #fff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.15);
 }
 
 /* ── Two-column content ── */
@@ -55,7 +57,7 @@
 /* ── Left column ── */
 .about-intro-text {
   font-family: var(--display);
-  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-size: clamp(1.2rem, 2.2vw, 2rem);
   font-weight: 500;
   line-height: 1.4;
   color: var(--color-text);
@@ -63,7 +65,7 @@
 
 .about-accent {
   color: var(--color-accent);
-  text-shadow: 0 0 12px rgba(95, 221, 232, 0.4);
+  text-shadow: 0 0 12px rgba(95, 221, 232, 0.35);
 }
 
 /* ── Right column ── */
@@ -89,7 +91,7 @@
 /* ── Stat cards ── */
 .about-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .about-card {
@@ -97,10 +99,11 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 20px 16px 20px;
+  padding: 20px 16px;
   border: 1px solid var(--color-text-faint);
   background-color: var(--color-bg-card);
   overflow: hidden;
+  transition: background-color 0.3s ease;
 }
 
 .about-card + .about-card {
@@ -133,4 +136,38 @@
   letter-spacing: 0.1em;
   color: var(--color-text-faint);
   text-transform: uppercase;
+}
+
+.about-right .button-default {
+  width: fit-content;
+  min-width: unset;
+  padding: 0 1.5rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .about {
+    padding: 5rem 6% 5rem;
+    gap: 3rem;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 4rem 1.25rem;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card + .about-card {
+    border-left: 1px solid var(--color-text-faint);
+    border-top: none;
+  }
 }
