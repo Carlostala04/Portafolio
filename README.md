@@ -13,8 +13,8 @@
 
 ## Preview
 
-<!-- Drop a screenshot here once the project is deployed -->
-<!-- ![Portfolio Preview](./public/preview.png) -->
+
+ ![Portfolio Preview](./public/preview.png)
 
 ---
 
