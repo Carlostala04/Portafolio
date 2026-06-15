@@ -1,4 +1,53 @@
 {
-  "welcome": "Welcome",
-  "description": "This is a React application"
+  "nav": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "stacks": "Stacks",
+    "contact": "Contáctame"
+  },
+  "introBar": {
+    "commentName": "// Carlos Talavera",
+    "commentStatus": "// Status",
+    "commentLocation": "// Location",
+    "role": "Frontend / React",
+    "status": "Disponible · Q3 2026",
+    "location": "Costa Rica"
+  },
+  "hero": {
+    "tagline": "Me gusta construir software para el futuro",
+    "cta": "Hablemos"
+  },
+  "about": {
+    "label": "01 · SOBRE MÍ",
+    "title": "SOBRE MÍ",
+    "intro_1": "Hola, soy Carlos. Frontend developer obsesionado con los ",
+    "intro_accent": "detalles",
+    "intro_2": " que nadie pide pero todos sienten.",
+    "p1": "Hace cinco años descubrí que construir software me daba la misma satisfacción que armar un mueble: ver cómo las piezas encajan y todo se sostiene solo. Desde ahí no he parado.",
+    "p2": "Hoy trabajo con React, Node y NestJS construyendo productos web — desde dashboards densos hasta landings que tienen que cargar en 1.2s sobre 3G. Me gusta el lado donde la ingeniería se vuelve diseño.",
+    "p3": "Cuando no estoy en el editor: café de especialidad, video juegos, hardware y leer documentación por placer (sí, lo dije).",
+    "yearsBuilding": "AÑOS CONSTRUYENDO",
+    "coffeeCups": "TAZAS DE CAFÉ",
+    "downloadCv": "DESCARGAR CV"
+  },
+  "technologies": {
+    "title": "Tecnologías y herramientas",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Bases de datos",
+    "tools": "Herramientas"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "repository": "Repositorio",
+    "preview": "Ver preview"
+  },
+  "projectsData": {
+    "mediRecord": "Sistema web para gestionar pacientes, consultas e historial médico.",
+    "myFarmer": "Aplicación mobile de gestión de animales y cultivos para ganaderos."
+  },
+  "footer": {
+    "getInTouch": "Contáctame",
+    "rights": "Todos los derechos reservados · Carlos Talavera"
+  }
 }
