@@ -1,9 +1,19 @@
+import { useTranslation } from "react-i18next";
 import LinkIcon from "../assets/favicon/link_icon";
 import GithubIcon from "../assets/favicon/tecnologies/GitHubIcon";
 import "../styles/cardProject.css";
 import "../styles/svg.css";
 
-export default function CardProject({ image, title, description, technologies, repository, preview }) {
+export default function CardProject({
+  image,
+  title,
+  descriptionKey,
+  technologies,
+  repository,
+  preview,
+}) {
+  const { t } = useTranslation();
+
   return (
     <article className="card-project">
       <div className="card-project-image">
@@ -12,7 +22,7 @@ export default function CardProject({ image, title, description, technologies, r
 
       <div className="card-project-description">
         <h4>{title}</h4>
-        <p>{description}</p>
+        <p>{t(descriptionKey)}</p>
       </div>
 
       <div className="card-project-technologies">
@@ -26,12 +36,14 @@ export default function CardProject({ image, title, description, technologies, r
       <div className="card-project-actions">
         <a href={repository} target="_blank" rel="noopener noreferrer">
           <GithubIcon />
-          Repositorio
+          {t("projects.repository")}
         </a>
-        <a href={preview} target="_blank" rel="noopener noreferrer">
-          <LinkIcon />
-          Ver preview
-        </a>
+        {preview !== "#" && (
+          <a href={preview} target="_blank" rel="noopener noreferrer">
+            <LinkIcon />
+            {t("projects.preview")}
+          </a>
+        )}
       </div>
     </article>
   );
