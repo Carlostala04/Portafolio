@@ -1,64 +1,56 @@
+import { useTranslation } from "react-i18next";
 import InfiniteIcon from "../assets/favicon/infinite_icon";
 import Button from "../components/Button";
 import { useCalculateExperience } from "../hooks/calculateYearsExperience";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 import "../styles/about.css";
 
 export default function AboutSection() {
-  const experienceYears = useCalculateExperience("2026-5-22");
+  const { t } = useTranslation();
+  const [ref, visible] = useScrollReveal();
+  const experienceYears = useCalculateExperience("2026-05-22");
+  const rv = visible ? "reveal visible" : "reveal";
 
   return (
-    <section className="about">
-      <div className="about-header">
+    <section id="about" className="about" ref={ref}>
+      <div className={`about-header ${rv}`}>
         <div className="about-section-label">
           <div className="about-label-line" />
-          <span>01 · SOBRE MÍ</span>
+          <span>{t("about.label")}</span>
         </div>
-        <h2 className="about-title">SOBRE MÍ</h2>
+        <h2 className="about-title">{t("about.title")}</h2>
       </div>
 
-      <div className="about-content">
+      <div className={`about-content ${rv}`} style={{ "--reveal-delay": "150ms" }}>
         <div className="about-left">
           <h4 className="about-intro-text">
-            Hola, soy Carlos. Frontend developer obsesionado con los{" "}
-            <span className="about-accent">detalles</span> que nadie pide pero
-            todos sienten.
+            {t("about.intro_1")}
+            <span className="about-accent">{t("about.intro_accent")}</span>
+            {t("about.intro_2")}
           </h4>
         </div>
 
         <div className="about-right">
           <div className="about-body">
-            <p>
-              Hace cinco años descubrí que construir software me daba la misma
-              satisfacción que armar un mueble: ver cómo las piezas encajan y
-              todo se sostiene solo. Desde ahí no he parado.
-            </p>
-            <p>
-              Hoy trabajo con React, Node y NestJS construyendo productos web —
-              desde dashboards densos hasta landings que tienen que cargar en
-              1.2s sobre 3G. Me gusta el lado donde la ingeniería se vuelve
-              diseño.
-            </p>
-            <p>
-              Cuando no estoy en el editor: café de especialidad. video juegos,
-              hardware y leer documentación por placer (sí, lo dije).
-            </p>
+            <p>{t("about.p1")}</p>
+            <p>{t("about.p2")}</p>
+            <p>{t("about.p3")}</p>
           </div>
 
           <div className="about-cards">
             <article className="about-card">
               <span className="about-card-stat">{experienceYears}</span>
-              <span className="about-card-label">AÑOS CONSTRUYENDO</span>
+              <span className="about-card-label">{t("about.yearsBuilding")}</span>
             </article>
-            
             <article className="about-card">
               <span className="about-card-stat">
                 <InfiniteIcon style={{ fontSize: "2.5rem" }} />
               </span>
-              <span className="about-card-label">TAZAS DE CAFÉ</span>
+              <span className="about-card-label">{t("about.coffeeCups")}</span>
             </article>
           </div>
 
-          <Button title="DESCARGAR CV" Icon={<span className="icon">↗</span>} />
+          <Button title={t("about.downloadCv")} Icon={<span className="icon">↗</span>} />
         </div>
       </div>
     </section>
