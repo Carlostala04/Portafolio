@@ -42,11 +42,17 @@
     "label": "03 · PROYECTOS",
     "title": "Proyectos",
     "repository": "Repositorio",
-    "preview": "Ver preview"
+    "preview": "Ver preview",
+    "problematica": "Problemática",
+    "solucion": "Solución"
   },
   "projectsData": {
     "mediRecord": "Aplicacion de escritorio para gestionar pacientes, consultas e historial médico.",
-    "myFarmer": "Aplicación mobile de gestión de animales y cultivos para ganaderos."
+    "mediRecordProblematica": "Un doctor independiente manejaba expedientes, citas e historial médico en papel o con herramientas dispersas, generando pérdida de información y procesos lentos.",
+    "mediRecordSolucion": "Aplicación de escritorio con Electron y React que centraliza la gestión de pacientes, consultas e historial médico en una sola plataforma con base de datos local vía Supabase.",
+    "myFarmer": "Aplicación mobile de gestión de animales y cultivos para ganaderos.",
+    "myFarmerProblematica": "Pequeños agricultores y ganaderos no contaban con herramientas digitales para registrar el estado de sus animales, ciclos de cultivo y operaciones del campo, dependiendo de métodos manuales.",
+    "myFarmerSolucion": "Aplicación web mobile-first con React y NestJS que permite registrar y monitorear ganado, cultivos y tareas del campo desde cualquier dispositivo con sincronización en tiempo real."
   },
   "footer": {
     "getInTouch": "Contáctame",

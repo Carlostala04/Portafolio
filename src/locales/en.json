@@ -42,11 +42,17 @@
     "label": "03 · PROJECTS",
     "title": "Projects",
     "repository": "Repository",
-    "preview": "Live preview"
+    "preview": "Live preview",
+    "problematica": "Problem",
+    "solucion": "Solution"
   },
   "projectsData": {
     "mediRecord": "Desktop app to manage patients, appointments and medical history.",
-    "myFarmer": "Mobile app for managing livestock and crops for farmers."
+    "mediRecordProblematica": "An independent doctor managed patient records, appointments, and medical history on paper or with scattered tools, leading to lost data and slow processes.",
+    "mediRecordSolucion": "Desktop application built with Electron and React that centralizes patient management, medical consultations, and history in one platform with a local database via Supabase.",
+    "myFarmer": "Mobile app for managing livestock and crops for farmers.",
+    "myFarmerProblematica": "Small-scale farmers and ranchers lacked digital tools to track livestock health, crop cycles, and farm operations, relying on unreliable manual methods.",
+    "myFarmerSolucion": "Mobile-first web app built with React and NestJS that lets farmers record and monitor livestock, crops, and farm tasks from any device with real-time sync."
   },
   "footer": {
     "getInTouch": "Get in touch",
