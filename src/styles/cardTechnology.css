@@ -84,7 +84,7 @@
 
 .card-technology .tech-icon {
   position: relative;
-  font-size: 3.5rem;
+  font-size: 4rem;
   padding: 10px;
   border-radius: 8px;
   overflow: hidden;
@@ -124,7 +124,10 @@
   pointer-events: none;
   font-family: var(--mono);
 }
-
+[data-theme="light"] .card-technology .tech-icon::after{
+  background: rgba(4, 138, 138, 0.534);
+  color: #fff;
+}
 .card-technology .tech-icon:hover {
   transform: scale(1.15);
 }
