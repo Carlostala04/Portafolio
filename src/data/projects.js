@@ -8,9 +8,11 @@ import Electron from "../assets/favicon/tecnologies/Electron"
 export const projects = [
   {
     id: 1,
-    image: "/proyectImages/mediRecord.png",
+    images: ["/proyectImages/medirecord/mediRecord.png"],
     title: "MediRecord",
     descriptionKey: "projectsData.mediRecord",
+    problematicaKey: "projectsData.mediRecordProblematica",
+    solucionKey: "projectsData.mediRecordSolucion",
     repository: "https://github.com/Carlostala04/Gestion-pacientes.git",
     preview: "https://medirecord-demo.com",
     technologies: [
@@ -23,9 +25,11 @@ export const projects = [
   },
   {
     id: 2,
-    image: "/proyectImages/MyFarmer.png",
+    images: ["/proyectImages/myfarmer/MyFarmer.png"],
     title: "My Farmer",
     descriptionKey: "projectsData.myFarmer",
+    problematicaKey: "projectsData.myFarmerProblematica",
+    solucionKey: "projectsData.myFarmerSolucion",
     repository: "https://github.com/Carlostala04/My-Farmer.git",
     preview: "#",
     technologies: [
