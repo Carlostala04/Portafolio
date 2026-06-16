@@ -121,8 +121,12 @@
 }
 
 .card-project-actions a svg {
-  width: 13px;
-  height: 13px;
+  width: 20px;
+  height: 20px;
+}
+
+.card-project-actions a:hover svg{
+  color: #fff;
 }
 
 /* ── Responsive ── */
