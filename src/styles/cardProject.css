@@ -1,6 +1,6 @@
 .card-project {
   width: clamp(300px, 45vw, 560px);
-  min-height: 280px;
+  height: 290px;
   background-color: var(--color-bg-card);
   border: 1px solid rgba(128, 128, 128, 0.15);
   border-radius: 14px;
@@ -8,14 +8,19 @@
   display: grid;
   grid-template-columns: 42% 58%;
   grid-template-rows: 1fr auto auto;
-  transition: border-color 0.2s ease, transform 0.2s ease, filter 0.2s ease;
-  cursor: default;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    filter 0.2s ease;
+  cursor: pointer;
 }
 
 .card-project:hover {
   border-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
   transform: translateY(-3px);
-  filter: drop-shadow(3px 4px 7px color-mix(in srgb, var(--color-accent) 50%, transparent));
+  filter: drop-shadow(
+    3px 4px 7px color-mix(in srgb, var(--color-accent) 50%, transparent)
+  );
 }
 
 /* ── Image ── */
@@ -26,11 +31,87 @@
   overflow: hidden;
 }
 
-.card-project-image img {
+/* ── Carousel ── */
+.carousel {
+  position: relative;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  overflow: hidden;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition:
+    opacity 0.2s ease,
+    background 0.2s ease;
+  z-index: 2;
+  padding: 0;
+}
+
+.card-project-image:hover .carousel-btn,
+.modal-gallery:hover .carousel-btn {
+  opacity: 1;
+}
+
+.carousel-btn--prev {
+  left: 6px;
+}
+.carousel-btn--next {
+  right: 6px;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+  z-index: 2;
+}
+
+.carousel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.carousel-dot.active {
+  background: var(--color-accent);
+  transform: scale(1.35);
 }
 
 /* ── Description ── */
@@ -111,7 +192,10 @@
   font-weight: 500;
   text-decoration: none;
   border: 1px solid rgba(128, 128, 128, 0.15);
-  transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease;
 }
 
 .card-project-actions a:hover {
@@ -125,33 +209,192 @@
   height: 20px;
 }
 
-.card-project-actions a:hover svg{
+.card-project-actions a:hover svg {
   color: #fff;
 }
 
-/* ── Responsive ── */
+/* ── Shared modal sub-components ── */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(128, 128, 128, 0.15);
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  color: var(--color-text);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+  padding: 0;
+}
+
+.modal-close:hover {
+  background: var(--color-accent);
+  color: var(--color-under-accent);
+  border-color: transparent;
+}
+
+.modal-gallery {
+  position: relative;
+  background: var(--color-bg-soft);
+  overflow: hidden;
+}
+
+.modal-gallery .carousel {
+  height: 100%;
+}
+
+.modal-gallery .carousel img {
+  object-fit: contain;
+}
+
+.modal-gallery .carousel-btn {
+  width: 36px;
+  height: 36px;
+  font-size: 1.4rem;
+}
+
+.modal-info {
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.modal-info h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  padding-right: 36px;
+}
+
+.modal-info__desc {
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+  line-height: 1.65;
+}
+
+.modal-info__context {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.modal-info__block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: var(--color-bg-soft);
+  border: 1px solid rgba(128, 128, 128, 0.12);
+}
+
+.modal-info__label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+}
+
+.modal-info__block p {
+  font-size: 0.8rem;
+  color: var(--color-text-soft);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.modal-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.modal-technologies .tech {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color: var(--color-bg-soft);
+  border: 1px solid rgba(128, 128, 128, 0.15);
+  font-size: 0.75rem;
+  color: var(--color-text-soft);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.modal-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 14px;
+  border-radius: 6px;
+  background-color: var(--color-bg-soft);
+  color: var(--color-text-soft);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid rgba(128, 128, 128, 0.15);
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.modal-actions a:hover {
+  background-color: var(--color-accent);
+  color: var(--color-under-accent);
+  border-color: transparent;
+}
+
+.modal-actions a svg {
+  width: 18px;
+  height: 18px;
+}
+
+.modal-actions a:hover svg {
+  color: #fff;
+}
+
+/* ── Responsive card ── */
 @media (max-width: 600px) {
   .card-project {
     width: 100%;
+    height: auto;
     grid-template-columns: 1fr;
-    grid-template-rows: 180px auto auto auto;
+    grid-template-rows: 200px auto auto auto;
   }
 
   .card-project-image {
     grid-column: 1;
     grid-row: 1;
   }
-
   .card-project-description {
     grid-column: 1;
     grid-row: 2;
   }
-
   .card-project-technologies {
     grid-column: 1;
     grid-row: 3;
   }
-
   .card-project-actions {
     grid-column: 1;
     grid-row: 4;
