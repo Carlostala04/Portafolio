@@ -127,8 +127,15 @@ export default function ProjectsSection() {
             </div>
 
             <div className="modal-info">
-              <h3>{openProject.title}</h3>
-              <p className="modal-info__desc">{t(openProject.descriptionKey)}</p>
+              <div className="modal-info__header">
+                <span className="modal-info__tag">
+                  // project {String(openProject.id).padStart(2, "0")}
+                </span>
+                <h3>{openProject.title}</h3>
+                <p className="modal-info__desc">{t(openProject.descriptionKey)}</p>
+              </div>
+
+              <div className="modal-info__divider" />
 
               <div className="modal-info__context">
                 <div className="modal-info__block">
@@ -141,26 +148,32 @@ export default function ProjectsSection() {
                 </div>
               </div>
 
-              <div className="modal-technologies">
-                {openProject.technologies.map(({ Icon, name }) => (
-                  <div className="tech" key={name}>
-                    <Icon />
-                    <span>{name}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="modal-actions">
-                <a href={openProject.repository} target="_blank" rel="noopener noreferrer">
-                  <GithubIcon />
-                  {t("projects.repository")}
-                </a>
-                {openProject.preview !== "#" && (
-                  <a href={openProject.preview} target="_blank" rel="noopener noreferrer">
-                    <LinkIcon />
-                    {t("projects.preview")}
+              <div className="modal-info__footer">
+                <div className="modal-technologies">
+                  {openProject.technologies.map(({ Icon, name }) => (
+                    <div className="tech" key={name}>
+                      <Icon />
+                      <span>{name}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="modal-actions">
+                  <a
+                    href={openProject.repository}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="modal-actions__primary"
+                  >
+                    <GithubIcon />
+                    {t("projects.repository")}
                   </a>
-                )}
+                  {openProject.preview !== "#" && (
+                    <a href={openProject.preview} target="_blank" rel="noopener noreferrer">
+                      <LinkIcon />
+                      {t("projects.preview")}
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>
