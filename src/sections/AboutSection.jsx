@@ -50,7 +50,12 @@ export default function AboutSection() {
             </article>
           </div>
 
-          <Button title={t("about.downloadCv")} Icon={<span className="icon">↗</span>} />
+          <Button
+            title={t("about.downloadCv")}
+            Icon={<span className="icon">↗</span>}
+            href="/CV_Carlos_Talavera.pdf"
+            target="_blank"
+          />
         </div>
       </div>
     </section>
