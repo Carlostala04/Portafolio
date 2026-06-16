@@ -8,7 +8,7 @@ import Electron from "../assets/favicon/tecnologies/Electron"
 export const projects = [
   {
     id: 1,
-    images: ["/proyectImages/medirecord/mediRecord.png"],
+    images: ["/proyectImages/medirecord/mediIcon.ico","/proyectImages/medirecord/mediRecord.png"],
     title: "MediRecord",
     descriptionKey: "projectsData.mediRecord",
     problematicaKey: "projectsData.mediRecordProblematica",
@@ -25,7 +25,7 @@ export const projects = [
   },
   {
     id: 2,
-    images: ["/proyectImages/myfarmer/MyFarmer.png"],
+    images: ["/proyectImages/myfarmer/MyFarmerIcon.png","/proyectImages/myfarmer/MyFarmer.png"],
     title: "My Farmer",
     descriptionKey: "projectsData.myFarmer",
     problematicaKey: "projectsData.myFarmerProblematica",
