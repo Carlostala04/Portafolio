@@ -40,7 +40,7 @@ export default function HeroSection({ darkMode }) {
             Carlostala04
           </a>
           <a
-            href="https://www.linkedin.com/in/carlos-talavera"
+            href="https://www.linkedin.com/in/carlos-talavera-8bb715414"
             target="_blank"
             rel="noopener noreferrer"
             className="button-default hero-contact-btn"
