@@ -417,12 +417,17 @@
   border-color: rgba(128, 128, 128, 0.2) !important;
   font-weight: 600 !important;
 }
-
+[data-theme="light"] .modal-actions__primary{
+  background-color: #fff !important;
+  color: #000 !important;
+}
 .modal-actions__primary:hover {
   background-color: var(--color-accent)!important;
   opacity: 0.88 !important;
 }
-
+[data-theme="light"] .modal-actions__primary:hover{
+  color: #fff !important;
+}
 .modal-actions__primary:hover svg{
   color: #fff;
 }
