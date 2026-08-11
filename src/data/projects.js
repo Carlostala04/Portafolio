@@ -4,6 +4,7 @@ import SupaBaseIcon from "../assets/favicon/tecnologies/SupaBaseIcon";
 import PostgreSqlIcon from "../assets/favicon/tecnologies/PostgreSqlIcon";
 import NestJsIcon from "../assets/favicon/tecnologies/NestJs";
 import Electron from "../assets/favicon/tecnologies/Electron"
+import JsIcon from "../assets/favicon/tecnologies/JsIcon";
 
 export const projects = [
   {
@@ -39,4 +40,19 @@ export const projects = [
       { name: "Supabase", Icon: SupaBaseIcon },
     ],
   },
+  {
+    id: 3,
+    images: [],
+    title: "Who's That Pokémon?",
+    descriptionKey: "projectsData.whoIsThatPokemon",
+    problematicaKey: "projectsData.whoIsThatPokemonProblematica",
+    solucionKey: "projectsData.whoIsThatPokemonSolucion",
+    repository: "#",
+    preview: "#",
+    technologies: [
+      { name: "React", Icon: ReactIcon },
+      { name: "JavaScript", Icon: JsIcon },
+      { name: "CSS", Icon: CssIcon },
+    ],
+  }
 ];

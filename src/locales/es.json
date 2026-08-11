@@ -52,7 +52,10 @@
     "mediRecordSolucion": "Aplicación de escritorio con Electron y React que centraliza la gestión de pacientes, consultas e historial médico en una sola plataforma con base de datos local vía Supabase.",
     "myFarmer": "Aplicación mobile de gestión de animales y cultivos para ganaderos.",
     "myFarmerProblematica": "Pequeños agricultores y ganaderos no contaban con herramientas digitales para registrar el estado de sus animales, ciclos de cultivo y operaciones del campo, dependiendo de métodos manuales.",
-    "myFarmerSolucion": "Aplicación web mobile-first con React y NestJS que permite registrar y monitorear ganado, cultivos y tareas del campo desde cualquier dispositivo con sincronización en tiempo real."
+    "myFarmerSolucion": "Aplicación web mobile-first con React y NestJS que permite registrar y monitorear ganado, cultivos y tareas del campo desde cualquier dispositivo con sincronización en tiempo real.",
+    "whoIsThatPokemon": "Mini juego para adivinar el nombre del Pokémon a partir de su silueta, usando la PokeAPI.",
+    "whoIsThatPokemonProblematica": "Se buscaba crear un proyecto divertido para practicar el consumo de APIs externas y el manejo de estado en React con un caso de uso entretenido.",
+    "whoIsThatPokemonSolucion": "Juego desarrollado con React que consume la PokeAPI para obtener Pokémon aleatorios, mostrando su silueta como pista y validando el intento del jugador en tiempo real."
   },
   "footer": {
     "getInTouch": "Contáctame",

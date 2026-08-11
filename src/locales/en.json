@@ -52,7 +52,10 @@
     "mediRecordSolucion": "Desktop application built with Electron and React that centralizes patient management, medical consultations, and history in one platform with a local database via Supabase.",
     "myFarmer": "Mobile app for managing livestock and crops for farmers.",
     "myFarmerProblematica": "Small-scale farmers and ranchers lacked digital tools to track livestock health, crop cycles, and farm operations, relying on unreliable manual methods.",
-    "myFarmerSolucion": "Mobile-first web app built with React and NestJS that lets farmers record and monitor livestock, crops, and farm tasks from any device with real-time sync."
+    "myFarmerSolucion": "Mobile-first web app built with React and NestJS that lets farmers record and monitor livestock, crops, and farm tasks from any device with real-time sync.",
+    "whoIsThatPokemon": "Mini game to guess a Pokémon's name from its silhouette, powered by the PokeAPI.",
+    "whoIsThatPokemonProblematica": "The goal was to build a fun project to practice consuming external APIs and managing state in React with an entertaining use case.",
+    "whoIsThatPokemonSolucion": "Game built with React that consumes the PokeAPI to fetch random Pokémon, showing their silhouette as a hint and validating the player's guess in real time."
   },
   "footer": {
     "getInTouch": "Get in touch",
