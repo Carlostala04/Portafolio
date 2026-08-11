@@ -47,7 +47,7 @@ export const projects = [
     descriptionKey: "projectsData.whoIsThatPokemon",
     problematicaKey: "projectsData.whoIsThatPokemonProblematica",
     solucionKey: "projectsData.whoIsThatPokemonSolucion",
-    repository: "#",
+    repository: "https://github.com/Carlostala04/WhoIsThatPokemon.git",
     preview: "#",
     technologies: [
       { name: "React", Icon: ReactIcon },
