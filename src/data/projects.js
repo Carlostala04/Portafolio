@@ -38,7 +38,7 @@ export const projects = [
     problematicaKey: "projectsData.myFarmerProblematica",
     solucionKey: "projectsData.myFarmerSolucion",
     repository: "https://github.com/Carlostala04/My-Farmer.git",
-    preview: "#",
+    preview: "https://who-is-that-pokemon-steel.vercel.app/",
     technologies: [
       { name: "React", Icon: ReactIcon },
       { name: "CSS", Icon: CssIcon },
