@@ -3,13 +3,16 @@ import CssIcon from "../assets/favicon/tecnologies/CssIcon";
 import SupaBaseIcon from "../assets/favicon/tecnologies/SupaBaseIcon";
 import PostgreSqlIcon from "../assets/favicon/tecnologies/PostgreSqlIcon";
 import NestJsIcon from "../assets/favicon/tecnologies/NestJs";
-import Electron from "../assets/favicon/tecnologies/Electron"
+import Electron from "../assets/favicon/tecnologies/Electron";
 import JsIcon from "../assets/favicon/tecnologies/JsIcon";
 
 export const projects = [
   {
     id: 1,
-    images: ["/proyectImages/medirecord/mediIcon.ico","/proyectImages/medirecord/mediRecord.png"],
+    images: [
+      "/proyectImages/medirecord/mediIcon.ico",
+      "/proyectImages/medirecord/mediRecord.png",
+    ],
     title: "MediRecord",
     descriptionKey: "projectsData.mediRecord",
     problematicaKey: "projectsData.mediRecordProblematica",
@@ -21,12 +24,15 @@ export const projects = [
       { name: "CSS", Icon: CssIcon },
       { name: "Supabase", Icon: SupaBaseIcon },
       { name: "PostgreSQL", Icon: PostgreSqlIcon },
-      {name:"Electron",Icon:Electron}
+      { name: "Electron", Icon: Electron },
     ],
   },
   {
     id: 2,
-    images: ["/proyectImages/myfarmer/MyFarmerIcon.png","/proyectImages/myfarmer/MyFarmer.png"],
+    images: [
+      "/proyectImages/myfarmer/MyFarmerIcon.png",
+      "/proyectImages/myfarmer/MyFarmer.png",
+    ],
     title: "My Farmer",
     descriptionKey: "projectsData.myFarmer",
     problematicaKey: "projectsData.myFarmerProblematica",
@@ -42,7 +48,10 @@ export const projects = [
   },
   {
     id: 3,
-    images: [],
+    images: [
+      "/proyectImages/whoisthatpokemon/iconPokemon.png",
+      "/proyectImages/whosithatpokemon/imagePreview.png",
+    ],
     title: "Who's That Pokémon?",
     descriptionKey: "projectsData.whoIsThatPokemon",
     problematicaKey: "projectsData.whoIsThatPokemonProblematica",
@@ -54,5 +63,5 @@ export const projects = [
       { name: "JavaScript", Icon: JsIcon },
       { name: "CSS", Icon: CssIcon },
     ],
-  }
+  },
 ];
